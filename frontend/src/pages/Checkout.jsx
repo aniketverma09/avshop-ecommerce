@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext.jsx";
 
-const API_URL = "http://127.0.0.1:5000/api/orders";
-
+const API_URL = "https://avshop-ecommerce.onrender.com/api/orders";
 function Checkout() {
   const navigate = useNavigate();
 

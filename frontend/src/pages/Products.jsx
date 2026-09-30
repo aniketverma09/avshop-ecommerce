@@ -5,7 +5,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { useCart } from "../context/CartContext.jsx";
 import { useWishlist } from "../context/WishlistContext.jsx";
 
-const API_URL = "http://127.0.0.1:5000/api/products";
+const API_URL = "https://avshop-ecommerce.onrender.com/api/products";
 
 const categories = [
   "All",

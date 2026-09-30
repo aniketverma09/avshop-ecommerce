@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const API_URL = "http://127.0.0.1:5000/api/auth";
+const API_URL = "https://avshop-ecommerce.onrender.com/api/auth";
 
 function Register() {
   const navigate = useNavigate();

@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 
 import { useCart } from "../context/CartContext.jsx";
 
-const API_URL = "http://127.0.0.1:5000/api/products";
+const API_URL = "https://avshop-ecommerce.onrender.com/api/products";
 
 function ProductDetails() {
   const { id } = useParams();
