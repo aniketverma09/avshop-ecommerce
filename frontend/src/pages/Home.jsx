@@ -4,10 +4,7 @@ function Home() {
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
 
-      {/* =========================
-          HERO
-      ========================= */}
-
+          {/* HERO */}
       <section className="relative flex min-h-[calc(100vh-72px)] items-center overflow-hidden px-6 py-20 sm:px-10 sm:py-24 md:px-16 lg:px-24">
 
         {/* Background Glow */}
@@ -92,10 +89,7 @@ function Home() {
       </section>
 
 
-      {/* =========================
-          CATEGORIES
-      ========================= */}
-
+          {/* CATEGORIES */}
       <section
         id="categories"
         className="px-6 py-16 sm:px-10 sm:py-20 md:px-16 lg:px-24"

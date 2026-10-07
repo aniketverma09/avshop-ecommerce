@@ -42,10 +42,7 @@ function Products() {
     isInWishlist,
   } = useWishlist();
 
-  /* =========================
-     FETCH PRODUCTS FROM API
-  ========================= */
-
+    //  FETCH PRODUCTS FROM API
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -75,7 +72,6 @@ function Products() {
           Our Cart/Wishlist currently use id.
           So we map _id -> id.
         */
-
         const formattedProducts = (data.products || []).map(
           (product) => ({
             ...product,
@@ -100,10 +96,7 @@ function Products() {
     fetchProducts();
   }, [category]);
 
-  /* =========================
-     SEARCH + SORT
-  ========================= */
-
+    //  SEARCH + SORT
   let filteredProducts = products.filter((product) => {
     const searchMatch = product.name
       ?.toLowerCase()
@@ -124,10 +117,7 @@ function Products() {
     );
   }
 
-  /* =========================
-     CATEGORY CHANGE
-  ========================= */
-
+    //  CATEGORY CHANGE
   const handleCategoryChange = (value) => {
     if (value === "All") {
       setSearchParams({});
@@ -138,9 +128,7 @@ function Products() {
     }
   };
 
-  /* =========================
-     ADD TO CART
-  ========================= */
+    //  ADD TO CART
 
   const handleAddToCart = (product) => {
     addToCart(product);
@@ -152,9 +140,7 @@ function Products() {
     }, 1200);
   };
 
-  /* =========================
-     WISHLIST
-  ========================= */
+    //  WISHLIST
 
   const handleWishlist = (product) => {
     if (isInWishlist(product.id)) {
@@ -167,9 +153,7 @@ function Products() {
   return (
     <main className="min-h-screen bg-black text-white pt-24 sm:pt-28 px-4 sm:px-6 lg:px-10 pb-12">
 
-      {/* =========================
-          HEADING
-      ========================= */}
+          {/* HEADING */}
 
       <div className="max-w-6xl mx-auto text-center">
 
@@ -183,9 +167,7 @@ function Products() {
 
       </div>
 
-      {/* =========================
-          FILTERS
-      ========================= */}
+          {/* FILTERS */}
 
       <div
         id="categories"
@@ -253,9 +235,7 @@ function Products() {
 
       </div>
 
-      {/* =========================
-          LOADING
-      ========================= */}
+          {/* LOADING */}
 
       {loading && (
 
@@ -273,9 +253,7 @@ function Products() {
 
       )}
 
-      {/* =========================
-          ERROR
-      ========================= */}
+          {/* ERROR */}
 
       {!loading && error && (
 
@@ -297,9 +275,7 @@ function Products() {
 
       )}
 
-      {/* =========================
-          PRODUCT GRID
-      ========================= */}
+          {/* PRODUCT GRID */}
 
       {!loading &&
         !error &&
@@ -441,9 +417,7 @@ function Products() {
           </div>
         )}
 
-      {/* =========================
-          NO PRODUCTS
-      ========================= */}
+          {/* NO PRODUCTS */}
 
       {!loading &&
         !error &&

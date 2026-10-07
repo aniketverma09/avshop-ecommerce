@@ -15,7 +15,6 @@ const isUserLoggedIn = () => {
 };
 
 const getSavedWishlist = () => {
-  // Guest user ke liye wishlist kabhi load nahi hogi
   if (!isUserLoggedIn()) {
     localStorage.removeItem(WISHLIST_KEY);
     return [];

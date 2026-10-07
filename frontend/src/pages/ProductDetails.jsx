@@ -16,10 +16,7 @@ function ProductDetails() {
 
   const [added, setAdded] = useState(false);
 
-  /* =========================
-     FETCH PRODUCT FROM MONGODB
-  ========================= */
-
+    //  FETCH PRODUCT FROM MONGODB
   useEffect(() => {
     const fetchProduct = async () => {
       try {
@@ -38,11 +35,7 @@ function ProductDetails() {
           );
         }
 
-        /*
-          MongoDB _id ko id ke naam se bhi save
-          kar rahe hain taaki CartContext ke saath
-          existing code compatible rahe.
-        */
+       
 
         setProduct({
           ...data.product,
@@ -67,10 +60,7 @@ function ProductDetails() {
     }
   }, [id]);
 
-  /* =========================
-     ADD TO CART
-  ========================= */
-
+    //  ADD TO CART
   const handleAddToCart = () => {
     if (!product) return;
 
@@ -83,10 +73,7 @@ function ProductDetails() {
     }, 1200);
   };
 
-  /* =========================
-     LOADING
-  ========================= */
-
+    //  LOADING
   if (loading) {
     return (
       <main className="min-h-screen bg-black text-white flex items-center justify-center px-4">
@@ -107,10 +94,7 @@ function ProductDetails() {
     );
   }
 
-  /* =========================
-     PRODUCT NOT FOUND
-  ========================= */
-
+    //  PRODUCT NOT FOUND
   if (error || !product) {
     return (
       <div className="min-h-screen bg-black text-white flex items-center justify-center px-4">
@@ -139,10 +123,7 @@ function ProductDetails() {
     );
   }
 
-  /* =========================
-     PRODUCT PAGE
-  ========================= */
-
+    //  PRODUCT PAGE
   return (
     <main className="min-h-screen bg-black text-white pt-24 px-4 pb-10">
 
@@ -159,10 +140,7 @@ function ProductDetails() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
 
-          {/* =========================
-              IMAGE
-          ========================= */}
-
+              {/* IMAGE */}
           <div className="rounded-2xl overflow-hidden">
 
             <img
@@ -173,10 +151,7 @@ function ProductDetails() {
 
           </div>
 
-          {/* =========================
-              DETAILS
-          ========================= */}
-
+              {/* DETAILS */}
           <div className="flex flex-col justify-center">
 
             {/* Category */}
